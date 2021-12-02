@@ -1,0 +1,53 @@
+@use "./base" as *;
+
+.trafik {
+  &__header {
+  }
+
+  &__title {
+  }
+
+  &__subtitle {
+  }
+
+  &__box {
+    &-header {
+    }
+    &-footer {
+    }
+  }
+
+  &__views {
+    &--span {
+    }
+  }
+
+  &__price {
+    &--span {
+    }
+  }
+
+  &__form {
+  }
+
+  &__input {
+  }
+
+  &__combination-box {
+  }
+
+  &__words {
+  }
+
+  &__sale {
+  }
+
+  &__text-box {
+  }
+
+  &__suggestions {
+  }
+
+  &__button {
+  }
+}
