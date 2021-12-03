@@ -16,45 +16,54 @@
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <script defer src="/js/script.js"></script>
     <title>Frontend Mentor | Interactive pricing component</title>
   </head>
   <body>
-    <main class="trafik">
-      <div class="trafik__container">
-        <div class="trafik__header">
-          <h1 class="trafik__title">Simple, traffic-based pricing</h1>
-          <p class="trafik__subtitle">
-            Sign-up for our 30-day trial. No credit card required.
-          </p>
-
-          <div class="trafik__box">
-            <div class="trafik__box-header">
-              <p class="trafik__views">
-                <span class="trafik__views--span">100K</span> Pageviews
-              </p>
-              <p class="trafik__price">
-                $16.00<span class="trafik__price--span">/month</span>
-              </p>
-              <form action="" class="trafik__form">
-                <input id="input" type="range" class="trafik__input" />
-              </form>
-              <div class="trafik__combination-box">
-                <p class="trafik__words">Monthly Billing</p>
-                <!-- <input type="switch" /> -->
-                <p class="trafik__words">Yearly Billing</p>
-                <p class="trafik__sale">25% discount</p>
-              </div>
+    <main class="traffic">
+      <div class="traffic__container">
+        <div class="traffic__header">
+          <h1 class="traffic__title">Simple, traffic-based pricing</h1>
+          <p class="traffic__subtitle">Sign-up for our 30-day trial.</p>
+          <p class="traffic__subtitle">No credit card required.</p>
+        </div>
+        <div class="traffic__box">
+          <div class="traffic__box-header">
+            <p class="traffic__views">
+              <span class="traffic__views--span">100K</span> Pageviews
+            </p>
+            <p class="traffic__price">
+              $16.00<span class="traffic__price--span">/month</span>
+            </p>
+            <form action="" class="traffic__form">
+              <input
+                id="input"
+                type="range"
+                min="0"
+                max="100"
+                value="50"
+                class="traffic__input"
+              />
+            </form>
+            <div class="traffic__combination-box">
+              <p class="traffic__words">Monthly Billing</p>
+              <label class="traffic__label">
+                <input type="checkbox" />
+                <span class="traffic__span"></span>
+              </label>
+              <p class="traffic__words">Yearly Billing</p>
+              <p class="traffic__sale">25%</p>
             </div>
           </div>
-          <div class="trafik__box-footer">
-            <div class="trafik__text-box">
-              <p class="trafik__suggestions">Unlimited websites</p>
-              <p class="trafik__suggestions">100% data ownership</p>
-              <p class="trafik__suggestions">Email reports</p>
+
+          <div class="traffic__box-footer">
+            <div class="traffic__text-box">
+              <p class="traffic__suggestions">Unlimited websites</p>
+              <p class="traffic__suggestions">100% data ownership</p>
+              <p class="traffic__suggestions">Email reports</p>
             </div>
-            <button class="trafik__button">Start my trial</button>
+            <button class="traffic__button">Start my trial</button>
           </div>
         </div>
       </div>

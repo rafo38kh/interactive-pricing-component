@@ -25,6 +25,11 @@ html {
 }
 
 body {
+  min-height: 100vh;
   font-size: 1.6rem;
   font-family: "Manrope", sans-serif;
+  background-color: $color-primary;
+  background-image: url(../images/bg-pattern.svg);
+  background-repeat: no-repeat;
+  background-size: 130rem;
 }
