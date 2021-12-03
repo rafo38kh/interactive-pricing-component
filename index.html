@@ -25,24 +25,28 @@
       <div class="traffic__container">
         <div class="traffic__header">
           <h1 class="traffic__title">Simple, traffic-based pricing</h1>
-          <p class="traffic__subtitle">Sign-up for our 30-day trial.</p>
-          <p class="traffic__subtitle">No credit card required.</p>
+          <div class="traffic__subtitle-box">
+            <p class="traffic__subtitle">Sign-up for our 30-day trial.</p>
+            <p class="traffic__subtitle">No credit card required.</p>
+          </div>
         </div>
         <div class="traffic__box">
           <div class="traffic__box-header">
-            <p class="traffic__views">
-              <span class="traffic__views--span">100K</span> Pageviews
-            </p>
-            <p class="traffic__price">
-              $16.00<span class="traffic__price--span">/month</span>
-            </p>
+            <div class="traffic__views-box">
+              <p class="traffic__views">100k</p>
+              <p class="traffic__views--text">Pageviews</p>
+            </div>
+            <div class="traffic__price-box">
+              <p class="traffic__price">$16.00</p>
+              <p class="traffic__price--month">/month</p>
+            </div>
             <form action="" class="traffic__form">
               <input
                 id="input"
                 type="range"
-                min="0"
-                max="100"
-                value="50"
+                min="1"
+                max="5"
+                value="3"
                 class="traffic__input"
               />
             </form>
@@ -53,7 +57,9 @@
                 <span class="traffic__span"></span>
               </label>
               <p class="traffic__words">Yearly Billing</p>
-              <p class="traffic__sale">25%</p>
+              <p class="traffic__sale">
+                25% <span class="traffic__sale--discount"> discount</span>
+              </p>
             </div>
           </div>
 
