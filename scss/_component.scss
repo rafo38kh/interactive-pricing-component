@@ -68,7 +68,6 @@
       &-footer {
         flex-direction: row;
         gap: 5rem;
-        // justify-content: space-between;
         padding: 3rem 4rem 2rem 4rem;
       }
     }
@@ -263,7 +262,6 @@
     display: inline-block;
     width: 4rem;
     height: 2rem;
-    // margin: 0 1rem;
   }
 
   .traffic__span {
@@ -271,7 +269,6 @@
     cursor: pointer;
     inset: 0;
     background-color: $color-secondary--light;
-    // background-color: hsl(226, 100%, 87%);
     transition: 0.3s;
     border-radius: 4rem;
   }
