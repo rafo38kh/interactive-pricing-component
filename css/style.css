@@ -20,6 +20,11 @@ body {
   background-repeat: no-repeat;
   background-size: 130rem;
 }
+@media (min-width: 810px) {
+  body {
+    background-size: contain;
+  }
+}
 
 .traffic__container {
   max-width: 500px;
@@ -45,13 +50,8 @@ body {
   }
 }
 .traffic__title {
-  font-size: 2rem;
+  font-size: clamp(2rem, 2vw, 2.9rem);
   padding: 0 0 1rem 0;
-}
-@media (min-width: 810px) {
-  .traffic__title {
-    font-size: 2.9rem;
-  }
 }
 @media (min-width: 810px) {
   .traffic__subtitle-box {
@@ -62,7 +62,7 @@ body {
   }
 }
 .traffic__subtitle {
-  font-size: 1.3rem;
+  font-size: clamp(1.3rem, 6vw, 1.6rem);
   color: #858fad;
 }
 @media (min-width: 810px) {
@@ -138,6 +138,14 @@ body {
   font-size: 1.5rem;
   color: #858fad;
 }
+@media (min-width: 810px) {
+  .traffic__price {
+    font-size: 4rem;
+  }
+  .traffic__price--month {
+    font-size: 2rem;
+  }
+}
 .traffic__form {
   grid-row: 2/3;
   width: 80%;
@@ -153,12 +161,15 @@ body {
 }
 .traffic__input {
   -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   width: 100%;
   height: 0.8rem;
   outline: none;
   border: none;
   border-radius: 0.5rem;
   background: linear-gradient(90deg, #a5f3eb 50%, #cdd7ee 50%);
+  cursor: pointer;
 }
 .traffic__input::-moz-range-thumb {
   height: 3.5rem;
@@ -179,9 +190,12 @@ body {
 .traffic__input::-moz-range-thumb:active {
   background-color: #0ca697;
   border: 1px solid #0b988a;
+  cursor: grabbing;
 }
 .traffic__input::-webkit-slider-thumb {
   -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   height: 3.5rem;
   width: 3.5rem;
   background-color: #10d5c2;
@@ -196,12 +210,47 @@ body {
 }
 .traffic__input::-webkit-slider-thumb:hover {
   -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   cursor: pointer;
 }
 .traffic__input::-webkit-slider-thumb:active {
   -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   background-color: #0ca697;
   border: 1px solid #0b988a;
+  cursor: grabbing;
+}
+.traffic__input::-ms-thumb {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 3.5rem;
+  width: 3.5rem;
+  background-color: #10d5c2;
+  background-image: url("../images/icon-slider.svg");
+  background-size: 2rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  border: 1px solid #0fc7b5;
+  box-shadow: #a5f3eb 0px 10px 15px 1px;
+  transition: all 0.3s;
+}
+.traffic__input::-ms-thumb:hover {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+.traffic__input::-ms-thumb:active {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #0ca697;
+  border: 1px solid #0b988a;
+  cursor: grabbing;
 }
 .traffic__combination-box {
   grid-row: 4/5;

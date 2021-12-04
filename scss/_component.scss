@@ -18,12 +18,10 @@
   }
 
   &__title {
-    font-size: 2rem;
+    font-size: clamp(2rem, 2vw, 2.9rem);
     padding: 0 0 1rem 0;
-    @media (min-width: 810px) {
-      font-size: 2.9rem;
-    }
   }
+
   &__subtitle-box {
     @media (min-width: 810px) {
       display: flex;
@@ -34,7 +32,7 @@
   }
 
   &__subtitle {
-    font-size: 1.3rem;
+    font-size: clamp(1.3rem, 6vw, 1.6rem);
     color: $color-secondary;
     @media (min-width: 810px) {
       font-size: 1.6rem;
@@ -89,8 +87,8 @@
   }
 
   &__views {
-    &--text {
-    }
+    // &--text {
+    // }
     @media (min-width: 810px) {
       grid-column: 1/2;
     }
@@ -116,6 +114,12 @@
       font-size: 1.5rem;
       color: $color-secondary;
     }
+    @media (min-width: 810px) {
+      font-size: 4rem;
+      &--month {
+        font-size: 2rem;
+      }
+    }
   }
 
   &__form {
@@ -132,6 +136,8 @@
 
   &__input {
     -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     width: 100%;
     height: 0.8rem;
     outline: none;
@@ -142,57 +148,97 @@
       rgb(165, 243, 235) 50%,
       rgb(205, 215, 238) 50%
     );
-  }
-
-  // for mozila
-
-  &__input::-moz-range-thumb {
-    height: 3.5rem;
-    width: 3.5rem;
-    background-color: hsl(174, 86%, 45%);
-    background-image: url("../images/icon-slider.svg");
-    background-size: 2rem;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 50%;
-    border: 1px solid hsl(174, 86%, 42%);
-    box-shadow: rgba(165, 243, 235, 1) 0px 10px 15px 6px;
-    transition: all 0.3s;
-  }
-
-  &__input::-moz-range-thumb:hover {
     cursor: pointer;
-  }
 
-  &__input::-moz-range-thumb:active {
-    background-color: hsl(174, 86%, 35%);
-    border: 1px solid hsl(174, 86%, 32%);
-  }
-  // for all browsers
-  &__input::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    height: 3.5rem;
-    width: 3.5rem;
-    background-color: hsl(174, 86%, 45%);
-    background-image: url("../images/icon-slider.svg");
-    background-size: 2rem;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 50%;
-    border: 1px solid hsl(174, 86%, 42%);
-    box-shadow: rgba(165, 243, 235, 1) 0px 10px 15px 1px;
-    transition: all 0.3s;
-  }
+    &::-moz-range-thumb {
+      height: 3.5rem;
+      width: 3.5rem;
+      background-color: hsl(174, 86%, 45%);
+      background-image: url("../images/icon-slider.svg");
+      background-size: 2rem;
+      background-repeat: no-repeat;
+      background-position: center;
+      border-radius: 50%;
+      border: 1px solid hsl(174, 86%, 42%);
+      box-shadow: rgba(165, 243, 235, 1) 0px 10px 15px 6px;
+      transition: all 0.3s;
 
-  &__input::-webkit-slider-thumb:hover {
-    -webkit-appearance: none;
-    cursor: pointer;
-  }
+      &:hover {
+        cursor: pointer;
+      }
 
-  &__input::-webkit-slider-thumb:active {
-    -webkit-appearance: none;
-    background-color: hsl(174, 86%, 35%);
-    border: 1px solid hsl(174, 86%, 32%);
+      &:active {
+        background-color: hsl(174, 86%, 35%);
+        border: 1px solid hsl(174, 86%, 32%);
+        cursor: grabbing;
+      }
+    }
+
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      height: 3.5rem;
+      width: 3.5rem;
+      background-color: hsl(174, 86%, 45%);
+      background-image: url("../images/icon-slider.svg");
+      background-size: 2rem;
+      background-repeat: no-repeat;
+      background-position: center;
+      border-radius: 50%;
+      border: 1px solid hsl(174, 86%, 42%);
+      box-shadow: rgba(165, 243, 235, 1) 0px 10px 15px 1px;
+      transition: all 0.3s;
+
+      &:hover {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        cursor: pointer;
+      }
+
+      &:active {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-color: hsl(174, 86%, 35%);
+        border: 1px solid hsl(174, 86%, 32%);
+        cursor: grabbing;
+      }
+    }
+
+    &::-ms-thumb {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      height: 3.5rem;
+      width: 3.5rem;
+      background-color: hsl(174, 86%, 45%);
+      background-image: url("../images/icon-slider.svg");
+      background-size: 2rem;
+      background-repeat: no-repeat;
+      background-position: center;
+      border-radius: 50%;
+      border: 1px solid hsl(174, 86%, 42%);
+      box-shadow: rgba(165, 243, 235, 1) 0px 10px 15px 1px;
+      transition: all 0.3s;
+
+      &:hover {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        cursor: pointer;
+      }
+
+      &:active {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-color: hsl(174, 86%, 35%);
+        border: 1px solid hsl(174, 86%, 32%);
+        cursor: grabbing;
+      }
+    }
   }
 
   &__combination-box {
