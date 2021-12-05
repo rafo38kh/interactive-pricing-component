@@ -19,6 +19,8 @@ body {
   background-image: url(../images/bg-pattern.svg);
   background-repeat: no-repeat;
   background-size: 130rem;
+  display: grid;
+  grid-template-rows: 1fr auto;
 }
 @media (min-width: 810px) {
   body {
@@ -50,6 +52,7 @@ body {
   }
 }
 .traffic__title {
+  color: #293356;
   font-size: clamp(2rem, 2vw, 2.9rem);
   padding: 0 0 1rem 0;
 }
@@ -62,8 +65,8 @@ body {
   }
 }
 .traffic__subtitle {
-  font-size: clamp(1.3rem, 6vw, 1.6rem);
   color: #858fad;
+  font-size: clamp(1.3rem, 6vw, 1.6rem);
 }
 @media (min-width: 810px) {
   .traffic__subtitle {
@@ -131,6 +134,7 @@ body {
   }
 }
 .traffic__price {
+  color: #293356;
   font-size: 3rem;
   font-weight: 800;
 }
@@ -342,6 +346,24 @@ body {
 .traffic__button:hover {
   color: white;
   cursor: pointer;
+}
+
+.attribution {
+  width: 100%;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  text-align: center;
+  margin: 0 auto;
+  padding: 7rem 0 1rem 0;
+  color: #293356;
+  transition: all 0.2s;
+}
+.attribution__link:link, .attribution__link:visited {
+  text-transform: uppercase;
+  color: #10d5c2;
+  transition: all 0.2s;
+}
+.attribution__link:hover, .attribution__link:active {
+  color: #ff8c66;
 }
 
 /*# sourceMappingURL=style.css.map */

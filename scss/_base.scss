@@ -32,6 +32,8 @@ body {
   background-image: url(../images/bg-pattern.svg);
   background-repeat: no-repeat;
   background-size: 130rem;
+  display: grid;
+  grid-template-rows: 1fr auto;
   @media (min-width: 810px) {
     background-size: contain;
   }
